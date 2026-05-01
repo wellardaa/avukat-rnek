@@ -1,34 +1,191 @@
-<!-- index.html (Avukatlık Demo) -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Yılmaz Hukuk & Danışmanlık | Profesyonel Çözümler</title>
-    <meta name="description" content="Ceza, Aile ve Ticaret hukuku alanlarında uzman avukatlık hizmeti.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yılmaz Hukuk & Danışmanlık | Profesyonel Hukuki Çözümler</title>
+    <!-- Modern Yazı Tipleri -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1a237e; --accent: #c5a059; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; color: #333; }
-        header { background: var(--primary); color: white; padding: 20px; text-align: center; }
-        h1 { font-family: 'Playfair Display', serif; margin: 0; }
-        .hero { padding: 80px 20px; text-align: center; background: #f4f4f4; border-bottom: 4px solid var(--accent); }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; }
-        .service-card { border: 1px solid #ddd; padding: 20px; text-align: center; transition: 0.3s; }
-        .service-card:hover { border-color: var(--accent); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .btn { background: var(--accent); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        :root {
+            --primary: #1a237e; /* Ağırbaşlı Lacivert */
+            --accent: #c5a059;  /* Prestijli Gold */
+            --text: #333;
+            --light: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigasyon */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        /* Ana Görsel Alanı (Hero) */
+        .hero {
+            padding: 120px 5%;
+            text-align: center;
+            /* Aşağıdaki URL kısmına Unsplash'ten bulduğun bir görselin linkini koyabilirsin */
+            background: linear-gradient(rgba(26, 35, 126, 0.8), rgba(26, 35, 126, 0.8)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000') center/cover;
+            color: white;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Butonlar */
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+            border: none;
+        }
+
+        .btn:hover {
+            background: #b38f4d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Hizmetler Bölümü */
+        .section-title {
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 5%;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            border-bottom: 3px solid var(--accent);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* İletişim Bölümü */
+        .contact {
+            background: var(--light);
+            padding: 50px 5%;
+            text-align: center;
+        }
+
+        footer {
+            background: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <header><h1>YILMAZ HUKUK</h1></header>
+
+    <header>
+        <h1>YILMAZ HUKUK</h1>
+        <div class="nav-links">
+            <a href="tel:+905000000000" style="color:white; text-decoration:none; font-weight:bold;">📞 Hemen Ara</a>
+        </div>
+    </header>
+
     <section class="hero">
         <h2>Haklarınız Bizimle Güvende</h2>
-        <p>15 yıllık tecrübe ile hukuki süreçlerinizde yanınızdayız.</p><br>
-        <a href="#" class="btn">Ücretsiz Ön Görüşme Randevusu</a>
+        <p>Deneyimli kadromuzla hukuki süreçlerinizde şeffaf ve sonuç odaklı danışmanlık.</p><br>
+        <!-- WhatsApp Yönlendirmesi -->
+        <a href="https://wa.me/905000000000?text=Merhaba,%20hukuki%20danışmanlık%20için%20bilgi%20almak%20istiyorum." 
+           class="btn" target="_blank">
+           WhatsApp'tan Ön Görüşme Başlat
+        </a>
     </section>
+
+    <h2 class="section-title">Uzmanlık Alanlarımız</h2>
     <div class="services">
-        <div class="service-card"><h3>Aile Hukuku</h3><p>Boşanma ve velayet süreçleri.</p></div>
-        <div class="service-card"><h3>Ceza Hukuku</h3><p>Etkin savunma ve danışmanlık.</p></div>
-        <div class="service-card"><h3>Ticaret Hukuku</h3><p>Şirketler için hukuki altyapı.</p></div>
+        <div class="service-card" onclick="location.href='https://wa.me/905000000000?text=Aile%20Hukuku%20hakkında%20bilgi%20almak%20istiyorum.'">
+            <h3>Aile Hukuku</h3>
+            <p>Boşanma, velayet ve nafaka davalarında yanınızdayız. Hassas süreçleri profesyonellikle yönetiyoruz.</p>
+            <span style="color: var(--accent); font-weight: bold;">Bilgi Al →</span>
+        </div>
+
+        <div class="service-card" onclick="location.href='https://wa.me/905000000000?text=Ceza%20Hukuku%20hakkında%20bilgi%20almak%20istiyorum.'">
+            <h3>Ceza Hukuku</h3>
+            <p>Soruşturma ve kovuşturma aşamalarında etkin savunma ve stratejik danışmanlık hizmeti sunuyoruz.</p>
+            <span style="color: var(--accent); font-weight: bold;">Bilgi Al →</span>
+        </div>
+
+        <div class="service-card" onclick="location.href='https://wa.me/905000000000?text=Gayrimenkul%20Hukuku%20hakkında%20bilgi%20almak%20istiyorum.'">
+            <h3>Gayrimenkul Hukuku</h3>
+            <p>Tapu iptal, tescil ve kira uyuşmazlıklarında mülkiyet haklarınızı en üst seviyede koruyoruz.</p>
+            <span style="color: var(--accent); font-weight: bold;">Bilgi Al →</span>
+        </div>
     </div>
+
+    <section class="contact" id="iletisim">
+        <h3>Bize Ulaşın</h3>
+        <p>İzmir Bölgesi Kurumsal Danışmanlık Hattı</p>
+        <p>📍 Çiğli, İzmir | 📧 info@yilmazhukuk.com</p>
+    </section>
+
+    <footer>
+        &copy; 2026 Yılmaz Hukuk & Danışmanlık. Tüm Hakları Saklıdır.
+    </footer>
+
 </body>
 </html>
